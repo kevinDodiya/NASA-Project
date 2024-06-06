@@ -1,2 +1,4 @@
-const planents = [];
-module.exports = planents
+// src/models/planets
+
+const planets = [];
+module.exports = planets;

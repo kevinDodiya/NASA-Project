@@ -1,10 +1,14 @@
-const apicontroller ='http://localhost:8000'
+const apicontroller = 'http://localhost:8000';
 
 // Load planets and return as JSON.
 async function httpGetPlanets() {
-  const response = await fetch(`${apicontroller}/planets`)
-  return await response.json()
+  const response = await fetch(`${apicontroller}/planets`);
+  return await response.json();
 }
+
+// Example usage:
+// httpGetPlanets().then(planets => console.log(planets)).catch(error => console.error('Error:', error));
+
 
 async function httpGetLaunches() {
   // TODO: Once API is ready.
