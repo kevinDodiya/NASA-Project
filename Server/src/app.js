@@ -2,7 +2,7 @@
 
 const express = require('express');
 const cors = require('cors');
-const planetsRouter = require('./routes/planets/planet.router');
+const planetsRouter = require('./routes/planets/planet.router');  // Correct path
 
 const app = express();
 

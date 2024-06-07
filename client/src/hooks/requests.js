@@ -1,13 +1,39 @@
-const apicontroller = 'http://localhost:8000';
+// Frontend code
+
+const apiController = 'http://localhost:8000';
 
 // Load planets and return as JSON.
 async function httpGetPlanets() {
-  const response = await fetch(`${apicontroller}/planets`);
-  return await response.json();
-}
+  try {
+    const response = await fetch(`${apiController}/planets`);
+    return await response.json();
+  } catch (error) {
+    console.error('Error fetching planets:', error);
+    return [];
+  }}
+// Frontend code
+
+// const apiController = 'http://localhost:8000';
+
+// // Load planets and return as JSON.
+// async function httpGetPlanets() {
+//   try {
+//     const response = await fetch(`${apiController}/planets`);
+//     return await response.json();
+//   } catch (error) {
+//     // console.error('Error fetching planets:', error);
+//     return [];
+//   }
+// }
+
+// // Example usage
+// httpGetPlanets().then(planets => {
+//   console.log(planets);
+// });
+
 
 // Example usage:
-// httpGetPlanets().then(planets => console.log(planets)).catch(error => console.error('Error:', error));
+httpGetPlanets().then(planets => console.log(planets)).catch(error => console.error('Error:', error));
 
 
 async function httpGetLaunches() {

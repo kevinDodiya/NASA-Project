@@ -1,5 +1,4 @@
-// src/planets/planets.router.js
-
+// src/routes/planets/planet.router.js
 
 const express = require('express');
 const { getAll } = require('./planet.controller');
