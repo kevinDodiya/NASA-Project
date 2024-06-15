@@ -1,15 +1,15 @@
-const API = "http://localhost:8000"; // Corrected API endpoint
+// Frontend code
 
+const apiController = 'http://localhost:8000';
+
+// Load planets and return as JSON.
 async function httpGetPlanets() {
   try {
-    const response = await fetch(`${API}/planets/getall`); // Corrected endpoint
-    if (!response.ok) {
-      throw new Error('Failed to fetch planets data');
-    }
+    const response = await fetch(`${apiController}/planets/getall`);
     return await response.json();
   } catch (error) {
     console.error('Error fetching planets:', error);
-    throw error; // Propagate the error back to the caller
+    return [];
   }
 }
 
